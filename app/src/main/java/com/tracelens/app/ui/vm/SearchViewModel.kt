@@ -88,7 +88,7 @@ class SearchViewModel(app: Application) : AndroidViewModel(app) {
     // ---------------- Image Search ----------------
     var imageQueryUri by mutableStateOf<Uri?>(null); private set
     private var imageSig: ImageSignature? = null
-    var imageMode by mutableStateOf(ImageMode.NEAR_DUPLICATE)
+    var imageMode by mutableStateOf(ImageMode.NEAR_DUPLICATE); private set
     var imageThreshold by mutableFloatStateOf(c.imageSearcher.defaultThreshold(ImageMode.NEAR_DUPLICATE))
     var imageSearching by mutableStateOf(false); private set
     var imageSearched by mutableStateOf(false); private set

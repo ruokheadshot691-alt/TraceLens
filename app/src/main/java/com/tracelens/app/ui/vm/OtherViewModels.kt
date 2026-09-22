@@ -56,8 +56,8 @@ class SettingsViewModel(private val app: Application) : AndroidViewModel(app) {
     private val c = (app as TraceLensApp).container
     val prefs = c.prefs
     var profileId by mutableStateOf(prefs.profileId)
-    var lowRam by mutableStateOf(prefs.lowRam)
-    var minImageSim by mutableStateOf(prefs.minImageSim)
+    var lowRam by mutableStateOf(prefs.lowRam); private set
+    var minImageSim by mutableStateOf(prefs.minImageSim); private set
     var cleared by mutableStateOf(false)
 
     fun availableProfiles(): List<Pair<FaceProfile, Boolean>> = FaceProfile.entries.map { it to it.isAvailable(app) }
