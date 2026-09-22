@@ -68,8 +68,8 @@ class SettingsViewModel(private val app: Application) : AndroidViewModel(app) {
         c.engine.release()
     }
 
-    fun setLowRam(v: Boolean) { prefs.lowRam = v; lowRam = v; c.engine.release() }
-    fun setMinImageSim(v: Float) { prefs.minImageSim = v; minImageSim = v }
+    fun updateLowRam(v: Boolean) { prefs.lowRam = v; lowRam = v; c.engine.release() }
+    fun updateMinImageSim(v: Float) { prefs.minImageSim = v; minImageSim = v }
 
     fun clearAll() = viewModelScope.launch {
         IndexWorker.cancel(app)

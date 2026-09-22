@@ -78,7 +78,7 @@ fun ImageSearchScreen(vm: SearchViewModel, onBack: () -> Unit, onCollections: ()
             item {
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     itemsIndexed(ImageMode.entries) { _, m ->
-                        FilterChip(selected = vm.imageMode == m, onClick = { vm.setImageMode(m) }, label = { Text(m.title) })
+                        FilterChip(selected = vm.imageMode == m, onClick = { vm.updateImageMode(m) }, label = { Text(m.title) })
                     }
                 }
             }

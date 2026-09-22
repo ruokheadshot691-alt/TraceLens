@@ -56,12 +56,12 @@ fun SettingsScreen(vm: SettingsViewModel, onBack: () -> Unit) {
                     Text("Mode RAM rendah", style = MaterialTheme.typography.bodyLarge)
                     Text("Decode gambar lebih kecil (800 px), thread lebih sedikit.", style = MaterialTheme.typography.bodySmall)
                 }
-                Switch(checked = vm.lowRam, onCheckedChange = vm::setLowRam)
+                Switch(checked = vm.lowRam, onCheckedChange = vm::updateLowRam)
             }
 
             SectionTitle("Ambang default Image Search")
             Text("${(vm.minImageSim * 100).toInt()}%", style = MaterialTheme.typography.bodyMedium)
-            Slider(value = vm.minImageSim, onValueChange = vm::setMinImageSim, valueRange = 0.5f..0.98f)
+            Slider(value = vm.minImageSim, onValueChange = vm::updateMinImageSim, valueRange = 0.5f..0.98f)
 
             SectionTitle("Privasi & data")
             Text(

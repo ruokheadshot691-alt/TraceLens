@@ -98,7 +98,7 @@ class SearchViewModel(app: Application) : AndroidViewModel(app) {
 
     fun refreshImageStats() = viewModelScope.launch { indexedImages = c.imageSearcher.indexedCount(scopeCollectionId) }
 
-    fun setImageMode(m: ImageMode) {
+    fun updateImageMode(m: ImageMode) {
         imageMode = m
         imageThreshold = c.imageSearcher.defaultThreshold(m)
     }
