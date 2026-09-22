@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Sengaja TIDAK ada izin storage/lokasi/internet-wajib.
+         Foto dipilih lewat Photo Picker / Storage Access Framework (folder & file yang dipilih user). -->
+    <application
+        android:name=".TraceLensApp"
+        android:allowBackup="false"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
